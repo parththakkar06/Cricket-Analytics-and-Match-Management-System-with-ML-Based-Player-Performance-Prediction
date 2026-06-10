@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url("../assets/aboutbck.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* margin: 100px 0; */
+
+    padding: 20px; /* Adding padding to the hero section */
+}
+
+.container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adding padding inside the container */
+}
+
+.content-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 60%;
+    padding: 40px; /* Existing padding */
+    margin: 20px; /* Adding margin to create space */
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.title-about {
+    color: #ffc107;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.title-name {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.trademark {
+    font-size: 16px;
+    vertical-align: super;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.btn-register {
+    background-color: #ffc107;
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #ffca2c;
+    transform: translateY(-2px);
+}
+
+.arrow-icon {
+    font-size: 20px;
+}
+
+/* Cricket player illustration styling */
+.cricket-illustration {
+    position: absolute;
+    right: 40px; /* Adjusted for the container and content-box padding/margin */
+    bottom: 0;
+    z-index: 2;
+    height: 60%;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 20px; /* Adding margin to create space */
+}
+
+.player-illustration {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .cricket-illustration {
+        position: relative;
+        height: auto;
+        width: 40%;
+        margin-top: 20px;
+        right: auto;
+    }
+
+    .player-illustration {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section, 
+    .container {
+        padding: 15px;
+    }
+
+    .content-box {
+        width: 90%;
+        padding: 30px;
+        margin: 15px;
+    }
+    
+    .title {
+        font-size: 36px;
+    }
+    
+    .description {
+        font-size: 16px;
+    }
+    
+    .cricket-illustration {
+        width: 60%;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section, 
+    .container {
+        padding: 10px;
+    }
+
+    .content-box {
+        width: 95%;
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .cricket-illustration {
+        width: 80%;
+        margin-right: 10px;
+    }
+}   

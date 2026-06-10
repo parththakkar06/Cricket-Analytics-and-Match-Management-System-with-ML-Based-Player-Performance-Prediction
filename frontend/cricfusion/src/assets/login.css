@@ -1,0 +1,159 @@
+/* Centering the Login Container */
+body.login-page{
+    margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full viewport height */
+      background: url("./back.jpg") no-repeat center center/cover; /* Ensure correct path */
+      position: relative;
+  }
+  
+  /* Dark overlay for better contrast */
+  body.login-page::before {
+    content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85); /* Dark overlay */
+      z-index: -1;
+  }
+  
+  
+  
+  /* Login Container */
+  .login-container {
+    max-width: 450px;
+    background: url("./back.jpg") no-repeat center center/cover;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+  }
+  
+  /* Title Styling */
+  .scoreboard-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1dc0cc;
+  }
+  
+  /* Logo Styling */
+  .logo-container {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .cricket-logo {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  /* Form Styling */
+  .scoreboard-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input Group for Icons */
+  .input1-group {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+  }
+  
+  /* Input Fields */
+  .form1-input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Space for icon */
+    font-size: 14px;
+    border: 1px solid #1dc0cc;
+    border-radius: 6px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s;
+  }
+  
+  /* Placeholder text color */
+  .form1-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Icons inside input fields */
+  .input1-group .input1-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1dc0cc;
+    font-size: 16px;
+  }
+  
+  /* Input Focus Effect */
+  .form1-input:focus {
+    border-color: #e6b800;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Submit Button */
+  .scoreboard-btn {
+    background: #1dc0cc;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  .scoreboard-btn:hover {
+    background: #e6b800;
+  }
+  
+  /* Link Styling */
+  .login-container p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .login-container a {
+    color: #1dc0cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .errorlogin-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    bottom: -18px; /* Keeps layout intact */
+    left: 0;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .login-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+  }

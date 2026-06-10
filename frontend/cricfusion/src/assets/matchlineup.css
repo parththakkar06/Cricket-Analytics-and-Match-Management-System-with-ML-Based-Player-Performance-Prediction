@@ -1,0 +1,200 @@
+/* MatchLineup.css */
+
+/* Main container */
+.match-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #272458 0%, #3a2769 100%);
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .match-card {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  /* Match Header */
+  .match-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+    margin-bottom: 16px;
+  }
+  
+  .team {
+    display: flex;
+    align-items: center;
+    background-color: #e5e7eb;
+    height: 100%;
+    z-index: 1;
+    padding: 0 20px;
+  }
+  
+  .team-left {
+    border-radius: 40px 0 0 40px;
+    flex: 1;
+    justify-content: flex-start;
+  }
+  
+  .team-right {
+    border-radius: 0 40px 40px 0;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .team-logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .team-logo img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .team-name {
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px;
+    text-transform: uppercase;
+  }
+  
+  .match-info {
+    background-color: #222;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .match-type {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .match-stage {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  /* Lineups */
+  .lineups-container {
+    background-color: white;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-lineup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .player-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 4px 0;
+  }
+  
+  .player-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    background-color: #f3f4f6;
+  }
+  
+  .player-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .player-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .player-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bat-icon {
+    color: #d97706;
+    margin-right: 6px;
+  }
+  
+  .ball-icon {
+    color: #ef4444;
+  }
+  
+  /* Toss Result */
+  .toss-result {
+    background-color: #1f2937;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  
+  /* Start Match Button */
+  .start-match-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  
+  .start-match-btn {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .start-match-btn:hover {
+    background-color: #1e40af;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .lineups-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .team-lineup + .team-lineup {
+      margin-top: 20px;
+    }
+    
+    .match-info {
+      padding: 8px 16px;
+    }
+    
+    .team {
+      padding: 0 10px;
+    }
+  }

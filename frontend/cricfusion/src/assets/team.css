@@ -1,0 +1,207 @@
+/* CreateTeam.css */
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .split-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-image: url("../assets/teambck.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  /* Left side with the logo */
+  .logo-side {
+    flex: 1;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .team-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  
+  .logo-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .logo-subtitle {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Right side with the form */
+  .form1-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+  }
+  
+  .form1-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-title {
+    color: #1a1a1a;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .form-title:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #3498db;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .team1ssss-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+   /* background-image: url("../assets/teambck.jpg"); */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
+  .form-actions {
+    margin-top: 10px;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .submit-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Media query for tablet and mobile responsiveness */
+  @media (max-width: 992px) {
+    .split-container {
+      flex-direction: column;
+    }
+    
+    .logo-side, .form-side {
+      padding: 20px;
+    }
+    
+    .logo-wrapper {
+      margin: 20px 0;
+    }
+    
+    .form-container {
+      margin: 20px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .form-container {
+      padding: 20px;
+    }
+    
+    .logo-title {
+      font-size: 22px;
+    }
+  }

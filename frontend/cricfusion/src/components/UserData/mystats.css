@@ -1,0 +1,272 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main container styles */
+.stats-container {
+  min-height: 100vh;
+  padding: 32px 0;
+}
+
+/* Profile section */
+.profile2-section {
+  background-image: url('/images/cricket-stadium-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 40px 0;
+  margin-bottom: 10px; /* 🔥 FIXED */
+}
+
+.profile2-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.profile2-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Profile card */
+.profile2-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: slideDown 0.6s ease-out;
+  border-top: 4px solid #1a56db; /* 🔥 NEW */
+}
+
+.profile2-header {
+  background-color: #1a56db;
+  padding: 20px 24px;
+}
+
+.profile2-header h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.profile2-body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .profile2-body {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.profile2-avatar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .profile2-avatar-container {
+    width: 25%;
+    margin-bottom: 0;
+  }
+}
+
+.profile2-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.profile2-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile2-details {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .profile2-details {
+    width: 75%;
+    padding-left: 32px;
+  }
+}
+
+.profile2-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .profile2-details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Stats section */
+.stats-section {
+  background-image: url('/images/cricket-pitch-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 40px 0;
+  margin-top: -20px; /* 🔥 FIXED */
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.stats-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Stats card */
+.stats-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.tab-button {
+  padding: 16px 24px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  background: transparent;
+}
+
+.tab-button.active {
+  color: #1a56db;
+  border-bottom: 3px solid #1a56db;
+}
+
+/* Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Stat cards */
+.stat-item {
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(6px); /* 🔥 NEW */
+  transition: 0.3s;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Summary */
+.summary-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: -10px 0 30px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #1a56db, #2563eb);
+  color: #fff;
+  padding: 16px 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.summary-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Loader */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  width: 64px;
+  height: 64px;
+  border: 4px solid rgba(26, 86, 219, 0.1);
+  border-top: 4px solid #1a56db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error */
+.error-message {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #b91c1c;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px;
+}

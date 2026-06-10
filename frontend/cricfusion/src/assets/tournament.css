@@ -1,0 +1,57 @@
+/* Form Styling for Create Tournament Form */
+#create-tournament-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+#create-tournament-form label {
+    color: #024b30;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#create-tournament-form .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#create-tournament-form .form-row > div {
+    flex: 1;
+}
+
+#create-tournament-form input, 
+#create-tournament-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#create-tournament-form input::placeholder {
+    color: #aaa;
+}
+
+#create-tournament-form button {
+    background-color: #024b30;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#create-tournament-form button:hover {
+    background-color: #036c48;
+}

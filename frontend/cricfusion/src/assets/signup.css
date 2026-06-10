@@ -1,0 +1,167 @@
+
+
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./back.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.signup-container {
+  width: 40%;
+  padding: 27px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(32, 31, 31, 0.1);
+}
+
+.scoreboard-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1dc0cc;
+}
+
+.scoreboard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.col-md-6 {
+  flex: 1;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #1dc0cc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+  color: white; /* Input text color */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for better contrast */
+}
+
+.form-input::placeholder {
+  color: white; /* Placeholder text color */
+  opacity: 1; /* Ensure full visibility */
+}
+
+select.form-input {
+  color: white; /* Text color for select input */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for better contrast */
+}
+
+select.form-input option {
+  color: white; /* Text color for options */
+  background-color: black; /* Background color for options */
+}
+
+.form-input:focus {
+  border-color: #e6b800;
+}
+
+.scoreboard-btn {
+  background: #1dc0cc;
+  padding: 60px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+}
+
+.scoreboard-btn:hover {
+  background: #00e64d;
+}
+
+
+
+.mt-3 {
+  color: white;
+}
+
+.login-link {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: #1dc0cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cricket-logo {
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.input-group .form-input {
+  padding-left: 30px; /* Add padding to make space for the icon */
+  margin: 10px;
+}
+
+.input-group .input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+  color: #1dc0cc; /* Ensure the icon color is visible */
+  font-size: 16px; /* Adjust size if needed */
+  pointer-events: none; /* Ensure the icon doesn't interfere with input */
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  position: absolute;
+  bottom: -18px;
+  /* top:-18px; */
+  left: 0;
+}
+
+@media (max-width: 600px) {
+  .signup-container {
+    max-width: 90%;
+    padding: 50px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

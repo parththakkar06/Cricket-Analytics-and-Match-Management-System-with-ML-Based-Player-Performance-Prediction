@@ -1,0 +1,624 @@
+/* Enhanced Match Setup CSS with animations and effects */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Base Styles */
+.match-setup-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Decorative elements */
+.match-setup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #3498db, #2ecc71, #3498db);
+  background-size: 200% 100%;
+  animation: gradientFlow 5s infinite linear;
+  z-index: 1;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: padding 0.3s ease;
+}
+
+.header-section:hover {
+  padding-bottom: 1.2rem;
+}
+
+.header-section h2 {
+  flex: 1;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.header-section:hover h2::after {
+  width: 100px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: #3498db;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.back-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 152, 219, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+  border-radius: 6px;
+}
+
+.back-btn:hover {
+  color: #2980b9;
+}
+
+.back-btn:hover::before {
+  left: 0;
+}
+
+.back-btn svg {
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover svg {
+  transform: translateX(-3px);
+}
+
+/* Teams Display */
+.teams-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9f2f9 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.teams-display:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.teams-display::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.5), transparent);
+  animation: scanLine 3s infinite linear;
+}
+
+@keyframes scanLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.team-display {
+  text-align: center;
+  flex: 1;
+  transition: all 0.3s ease;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.team-display:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transform: scale(1.03);
+}
+
+.team-display h3 {
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.team-display h3::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #3498db;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.team-display:hover h3::after {
+  width: 100%;
+}
+
+.team-display p {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.team-display:hover p {
+  transform: scale(1.05);
+  color: #1a5276;
+}
+
+.vs-text {
+  color: #7f8c8d;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.vs-text::before, .vs-text::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  background-color: #bdc3c7;
+  top: 50%;
+  transition: all 0.3s ease;
+}
+
+.vs-text::before {
+  left: -20px;
+}
+
+.vs-text::after {
+  right: -20px;
+}
+
+.teams-display:hover .vs-text {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+.teams-display:hover .vs-text::before, 
+.teams-display:hover .vs-text::after {
+  width: 25px;
+  background-color: #e74c3c;
+}
+
+/* Form Styles */
+.match-form {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  max-height: 70vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+.match-form::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+.match-form::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.match-form::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  border-radius: 4px;
+}
+
+.match-form::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #2980b9, #27ae60);
+}
+
+.match-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(52, 152, 219, 0.05), transparent 50%);
+  z-index: -1;
+}
+
+.match-form:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-row:hover {
+  transform: translateX(5px);
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-group:hover {
+  transform: translateY(-2px);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  transform-origin: left;
+  position: relative;
+  padding-left: 5px;
+}
+
+.form-group:focus-within label {
+  color: #3498db;
+  transform: scale(1.03);
+}
+
+.form-group label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 0;
+  width: 2px;
+  background: #3498db;
+  transform: translateY(-50%);
+  transition: height 0.3s ease;
+}
+
+.form-group:focus-within label::before {
+  height: 80%;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15);
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #e74c3c;
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+
+.form-group input.error:focus,
+.form-group select.error:focus {
+  box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.15);
+}
+
+.error-msg {
+  display: block;
+  margin-top: 0.5rem;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  animation: fadeInUp 0.3s ease-out;
+  padding-left: 5px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.submit-btn {
+  padding: 1rem 3rem;
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+  transform: translateY(-3px);
+}
+
+.submit-btn:hover::before {
+  animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+  100% {
+    left: 100%;
+  }
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(46, 204, 113, 0.4);
+}
+
+/* Toast container customization */
+.Toastify__toast-container {
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.Toastify__progress-bar {
+  height: 4px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-section h2 {
+    text-align: left;
+    margin-top: 1rem;
+  }
+  
+  .teams-display {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .vs-text {
+    padding: 1rem 0;
+  }
+  
+  .vs-text::before, .vs-text::after {
+    width: 30px;
+    top: 50%;
+  }
+  
+  .vs-text::before {
+    left: -40px;
+  }
+  
+  .vs-text::after {
+    right: -40px;
+  }
+  
+  .match-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .match-setup-container {
+    padding: 1rem;
+  }
+  
+  .form-group {
+    min-width: 100%;
+  }
+  
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+/* Cricket-themed background */
+body {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+  background-attachment: fixed;
+}
+
+/* Floating animation for icons */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Special pulse effect for focused elements */
+@keyframes pulseFocus {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
+
+/* Apply floating animation to icons */
+.back-btn svg, .form-actions svg {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Apply pulse effect to focused elements */
+.form-group input:focus, .form-group select:focus {
+  animation: pulseFocus 2s infinite;
+}
+
+/* Custom input field styles */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+/* Add fancy focus effect to match form */
+.match-form:focus-within {
+  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+}

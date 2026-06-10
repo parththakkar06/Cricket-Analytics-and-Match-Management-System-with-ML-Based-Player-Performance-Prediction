@@ -1,0 +1,141 @@
+/* Base Layout Styles */
+.col-md-9 {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 380px;
+  align-items: flex-start;
+  margin-top: -800px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease; /* Smooth transitions for responsive changes */
+}
+
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 20px; /* Better than fixed margins for responsive spacing */
+}
+
+.col-md-6 {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  transition: transform 0.3s ease; /* For hover animations */
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hover Animations */
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Side Animation for Cards */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.col-md-6 {
+  animation: slideInFromRight 0.5s ease forwards;
+}
+
+/* Delay animations for staggered effect */
+.col-md-6:nth-child(1) { animation-delay: 0.1s; }
+.col-md-6:nth-child(2) { animation-delay: 0.2s; }
+.col-md-6:nth-child(3) { animation-delay: 0.3s; }
+.col-md-6:nth-child(4) { animation-delay: 0.4s; }
+
+/* Right-aligned content styles */
+.col-domestic {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.row_name {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.col-domestic {
+  margin-left: auto;
+  text-align: right;
+}
+
+.filter-card {
+  margin-top: -50px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .col-md-9 {
+    margin-left: 300px;
+    margin-top: -700px;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-md-9 {
+    margin-left: 250px;
+    margin-top: -600px;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 100%; /* Stack cards vertically on smaller screens */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-9 {
+    margin-left: 0;
+    margin-top: 20px;
+    justify-content: center; /* Center content on mobile */
+  }
+  
+  .row.g-4 {
+    justify-content: center;
+  }
+  
+  .row_name, .col-domestic {
+    justify-content: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  
+  .filter-card {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-md-6 {
+    animation: none; /* Disable animations on very small screens */
+  }
+  
+  .card:hover {
+    transform: none; /* Disable hover effects on touch devices */
+  }
+}
+
+/* Optional: Add a smooth transition for filter card */
+.filter-card {
+  transition: all 0.3s ease;
+}
+
+.filter-card:hover {
+  transform: scale(1.02);
+}
